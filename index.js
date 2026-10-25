@@ -12,5 +12,12 @@ function removePlaying(event) {
 }
 
 const keys = document.querySelectorAll('.key')
-keys.forEach(key => key.addEventListener('transitionend', removePlaying))
+keys.forEach(key => {
+    key.addEventListener('transitionend', removePlaying)
+    key.addEventListener('keydown', playSound)
+    key.addEventListener('touchstart', playSound, {
+        passive: true
+    })
+})
+
 document.addEventListener('keydown', playSound)
