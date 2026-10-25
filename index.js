@@ -1,6 +1,14 @@
 function playSound(event) {
-    const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`)
-    const key = document.querySelector(`.key[data-key="${event.keyCode}"]`)
+    let keyCode;
+
+    if (event.keyCode) {
+        keyCode = event.keyCode;
+    } else {
+        keyCode = this.getAttribute('data-key');
+    }
+
+    const audio = document.querySelector(`audio[data-key="${keyCode}"]`)
+    const key = document.querySelector(`.key[data-key="${keyCode}"]`)
 
     key.classList.add('playing')
     audio.currentTime = 0
