@@ -70,6 +70,13 @@ kbd {
 }
 
 @media (max-width: 25rem) {
+  .keys {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+  }
+
   .key {
     flex: calc(50% - 1rem);
   }
