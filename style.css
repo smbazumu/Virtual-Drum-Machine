@@ -57,7 +57,8 @@ kbd {
 
 @media (max-width: 48rem) {
   .keys {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-content: center;
     gap: 1rem;
@@ -71,7 +72,8 @@ kbd {
 
 @media (max-width: 25rem) {
   .keys {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-content: center;
     gap: 1rem;
